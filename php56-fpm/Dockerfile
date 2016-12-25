@@ -31,7 +31,7 @@ RUN echo "xdebug.idekey=\"PHPSTORM\"" >> /usr/local/etc/php/conf.d/docker-php-ex
 RUN echo "xdebug.remote_port=9001" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 
-# custom scripts (@todo: maybe remove somewhere else or create new containers?)
+# custom scripts and installing extensions
 
 RUN apt-get install -y apt-transport-https
 RUN curl http://repo.varnish-cache.org/debian/GPG-key.txt | apt-key add -

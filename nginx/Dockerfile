@@ -8,10 +8,9 @@ RUN apt-get update && apt-get install -y \
 ADD nginx.conf /etc/nginx/
 # here you can add your nginx conf for your different sites
 # also make sure to add hosts into your /etc/hosts
-ADD review-analytics.conf /etc/nginx/
-ADD review-analytics-include.conf /etc/nginx/
-ADD review-analytics.conf /etc/nginx/sites-available/
-RUN ln -s /etc/nginx/sites-available/review-analytics.conf /etc/nginx/sites-enabled/review-analytics
+#ADD example.conf /etc/nginx/
+#ADD example.conf /etc/nginx/sites-available/
+#RUN ln -s /etc/nginx/sites-available/example.conf /etc/nginx/sites-enabled/example
 
 RUN rm /etc/nginx/sites-enabled/default
 
