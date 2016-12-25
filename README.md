@@ -27,19 +27,14 @@ $ docker-compose build
 $ docker-compose up
 ```
 
-4. Update the hosts parameter, ie for Symfony2 in app/config/parameters.yml:
+Then update the hosts parameter in your app config, ie for Symfony2 in app/config/parameters.yml:
 
 ```yaml
 database_host: mysqldb
-
 ... 
-
 solr_host: solr
-
 ...
-
 rabbit_mq_host: rabbitmq
-
 ```
 
 
@@ -64,15 +59,15 @@ First have a look [here](https://docs.docker.com/docker-for-mac/troubleshoot/).
 
 ### docker-compose build is not responding or is way too slow on Mac OS X
 
-Try adding this line into your /etc/hosts:
+Try adding this line into your ```/etc/hosts```:
 
 ```
 127.0.0.1 localunixsocket
-``
+```
 
 ### Composer is too slow
 
-Disable xdebug (inside the container from /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini)
+Disable xdebug (inside the container from ```/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini```)
 
 
 
