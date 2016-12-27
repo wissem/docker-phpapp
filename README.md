@@ -13,6 +13,7 @@ Basic docker containers to setup a modern PHP app (Symfony2, Laravel, etc).
 - rabbitmq
 - memcached
 - scala
+- selenuim - firefox
 
 ## Installation
 
