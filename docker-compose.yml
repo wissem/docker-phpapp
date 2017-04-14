@@ -11,22 +11,23 @@ services:
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     php:
-        build: php56-fpm
+        build: php71-fpm
         ports:
             - 9000:9000
         links:
             - db:mysqldb
         volumes:
-            - ${WEB_APP_PATH}:/var/www/
-            - ./logs/app:/var/www/logs
+            - ${WEB_APP_PATH}:/var/www/html/
+            - ./logs/app:/var/www/html/logs
         links:
             - redis
             - rabbitmq
             - memcached
-    nginx:
-        build: nginx
+    nginx-server:
+        build: nginx-server
         ports:
             - 80:80
+            - 443:443
         links:
             - php
         volumes_from:
